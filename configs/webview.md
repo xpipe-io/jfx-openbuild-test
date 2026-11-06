@@ -1,6 +1,7 @@
-# eabuild
+# webview
 
-The latest early access build of JavaFX, built from its jfx build tag, e.g. `28+14`, without any changes.
+The latest development state of JavaFX including the native media and WebView code, like the official builds.
+Compiling WebKit takes a lot longer than the rest of the build, so expect builds of several hours.
 
 The configuration is a:
 
@@ -17,13 +18,14 @@ The build is based on:
 The following PRs and commits are currently merged into this build:
 
 <!-- MERGE-LIST-START -->
+
 <!-- MERGE-LIST-END -->
 
 The artifacts are built with the following additional properties:
 
 <!-- BUILD-PROPS-START -->
-- COMPILE_MEDIA=false
-- COMPILE_WEBKIT=false
+- COMPILE_MEDIA=true
+- COMPILE_WEBKIT=true
 <!-- BUILD-PROPS-END -->
 
 The following platforms are built:
@@ -43,7 +45,7 @@ The following boot JDK is used for the build:
 - version=26.0.2
 <!-- BOOT-JDK-END -->
 
-The builds run on the following GitHub Actions runners:
+The following runners are used for the build:
 
 <!-- RUNNERS-START -->
 - default=ubuntu-26.04
@@ -57,8 +59,12 @@ The builds run on the following GitHub Actions runners:
 The following tests are run:
 
 <!-- TESTS-START -->
-skip
+smoke
 <!-- TESTS-END -->
 
+The Maven artifacts are published to the GitHub Packages of your fork, e.g. `https://maven.pkg.github.com/<owner>/<repository>`.
+They are not published to a Maven repository if this is empty:
+
 <!-- MAVEN-REPOSITORY-START -->
+
 <!-- MAVEN-REPOSITORY-END -->
