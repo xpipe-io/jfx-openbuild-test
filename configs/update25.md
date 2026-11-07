@@ -1,7 +1,7 @@
-# webview
+# update25
 
-The latest development state of JavaFX including the native media and WebView code, like the official builds.
-Compiling WebKit takes a lot longer than the rest of the build, so expect builds of several hours.
+The JavaFX 25 update releases with additional fixes backported into them.
+A new release is created for every new build tag of the update repository, e.g. `25.0.5+1`.
 
 The configuration is a:
 
@@ -12,10 +12,11 @@ release
 The build is based on:
 
 <!-- BASE-START -->
-- https://github.com/openjdk/jfx/tree/master
+- https://github.com/openjdk/jfx25u/tree/master
 <!-- BASE-END -->
 
-The following PRs and commits are currently merged into this build:
+The following fixes are merged into every update release. An entry can be a pull request, a branch,
+or a commit, e.g. `https://github.com/openjdk/jfx/commit/<sha>` for a fix from jfx master:
 
 <!-- MERGE-LIST-START -->
 
@@ -24,8 +25,8 @@ The following PRs and commits are currently merged into this build:
 The artifacts are built with the following additional properties:
 
 <!-- BUILD-PROPS-START -->
-- COMPILE_MEDIA=true
-- COMPILE_WEBKIT=true
+- COMPILE_MEDIA=false
+- COMPILE_WEBKIT=false
 <!-- BUILD-PROPS-END -->
 
 The following platforms are built:
@@ -42,7 +43,7 @@ The following boot JDK is used for the build:
 
 <!-- BOOT-JDK-START -->
 - distribution=temurin
-- version=26.0.2
+- version=24
 <!-- BOOT-JDK-END -->
 
 The following runners are used for the build:
@@ -59,7 +60,7 @@ The following runners are used for the build:
 The following tests are run:
 
 <!-- TESTS-START -->
-smoke
+skip
 <!-- TESTS-END -->
 
 The Maven artifacts are published to the GitHub Packages of your fork, e.g. `https://maven.pkg.github.com/<owner>/<repository>`.

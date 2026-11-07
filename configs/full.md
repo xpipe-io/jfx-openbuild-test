@@ -1,7 +1,7 @@
-# update27
+# ea
 
-The JavaFX 27 update releases with additional fixes backported into them.
-A new release is created for every new build tag of the update repository, e.g. `27.0.1+5`.
+Builds of the upstream early access releases, without any changes. A new release is created for every new build tag of jfx master, e.g. `28+15`,
+so this is the closest to the official early access builds.
 
 The configuration is a:
 
@@ -12,11 +12,10 @@ release
 The build is based on:
 
 <!-- BASE-START -->
-- https://github.com/openjdk/jfx27u/tree/master
+- https://github.com/openjdk/jfx/tree/master
 <!-- BASE-END -->
 
-The following fixes are merged into every update release. An entry can be a pull request, a branch,
-or a commit, e.g. `https://github.com/openjdk/jfx/commit/<sha>` for a fix from jfx master:
+Nothing is merged into this build:
 
 <!-- MERGE-LIST-START -->
 
@@ -43,7 +42,7 @@ The following boot JDK is used for the build:
 
 <!-- BOOT-JDK-START -->
 - distribution=temurin
-- version=25
+- version=26.0.2
 <!-- BOOT-JDK-END -->
 
 The following runners are used for the build:
@@ -60,7 +59,7 @@ The following runners are used for the build:
 The following tests are run:
 
 <!-- TESTS-START -->
-skip
+full
 <!-- TESTS-END -->
 
 The Maven artifacts are published to the GitHub Packages of your fork, e.g. `https://maven.pkg.github.com/<owner>/<repository>`.
